@@ -1,0 +1,417 @@
+/* ---------- Reset e base ---------- */
+{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f1ec;
+    color: #555555;
+}
+
+h1, h2, h3, .presentazione::first-letter {
+    font-family: 'Playfair Display', Georgia, serif; /* Aggiornato */
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    background-image: url("Media/Immagini/header-bg.jpg");
+    background-color: #3d3f49;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 16px 40px;
+    border-bottom: 4px solid #ffcc00;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 4rem;
+    font-family: 'Playfair Display', georgia, serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.sottotitolo {
+    color: #e7dec3;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* ---------- Navigazione ---------- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+nav a {
+    color: #ffffff; 
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-decoration: none;
+    border: 1px solid #858585;
+    border-radius: 5% ;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav a i {
+    margin-right: 5px;
+}
+
+nav a:hover {
+    background-color: #ffcc00;
+    color: #222222;
+    border-color: #ffcc00;
+    display: inline-block;
+}
+
+
+/* ---------- Contenuto principale ---------- */
+main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+main section:first-of-type {
+    margin-top: -55px;
+    position: relative;
+    z-index: 10;
+}
+section {
+    margin-top: 24px;
+}
+
+h2 {
+    color: #1f3a75; /* blu scuro */
+    font-size: 1.9rem;
+    margin-bottom: 16px;
+}
+
+.card-sezione h2:before {
+    content: "◆";              
+    display: inline-block;   
+    color: #ffcc00;
+    margin-right: 12px;       
+    vertical-align: middle;   
+}
+
+/* ---------- Sezione "Chi sono" ---------- */
+
+.card-sezione  {
+    background-color: #ffffff;
+    position: relative;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 30px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.foto-profilo {
+    float: left;
+    max-width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid #ffcc00;;
+    margin-right: 25px;
+    margin-bottom: 15px;
+}
+
+.presentazione::first-letter {
+    font-size: 55px;
+    font-weight: bold;
+    color: #1f3a75;
+    float: left;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+/* ---------- Sezione "Competenze" ---------- */
+
+.sottotitolo-grigio {
+    color: #666666;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.stack-header-label {
+    font-size: 0.85rem;
+    font-weight: lighter;
+    font-style: italic;
+    color: #1f3a75;
+    margin-bottom: 12px;
+}
+
+.tabella-intestazione {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fdf8e3;
+    padding: 10px 0px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #1f3a75;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.tabella-intestazione span:first-child {
+    padding-left: 36px; 
+    flex: 1;
+}
+
+.tabella-intestazione span:last-child {
+    width: 300px; 
+    text-align: left; 
+}
+
+.competenze-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.competenze-lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid #ededf2;
+}
+
+.comp-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 60%;
+}
+
+.comp-info i {
+    color: #1f3a75;
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+
+.comp-testo {
+    display: flex;
+    flex-direction: column;
+}
+
+.comp-testo strong {
+    font-size: 1rem;
+    color: #222222;
+}
+
+.comp-testo p {
+    margin: 4px 0 0 0;
+    font-size: 0.85rem;
+    color: #666666;
+    line-height: 1.4;
+}
+
+.barra-livello {
+    width: 300px;
+    height: 8px;
+    background-color: #ededf2;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.riempimento {
+    height: 100%;
+    background-color: #ffcc00;
+    border-radius: 4px;
+}
+
+/* Percentuali di riempimento */
+.riempimento.html { width: 90%; }
+.riempimento.css  { width: 80%; }
+.riempimento.git  { width: 70%; }
+.riempimento.vscode { width: 85%; }
+.riempimento.markdown { width: 75%; }
+
+/* ---------- Sezione "Esperienze" ---------- */
+table {
+    width: 100%; 
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+caption {
+    padding-bottom: 12px;
+    text-align: left; 
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #1f3a75; 
+}
+
+thead tr {
+    background-color: #fdf8e3; 
+}
+
+th {
+    color: #1f3a75;
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 10px 16px; 
+}
+
+td {
+    padding: 12px 16px; 
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+th, td {
+    text-align: left;
+    border-bottom: 1px solid #ededf2;
+}
+
+/* ---------- Sezione "Progetti" ---------- */
+.progetto {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fdfdfd;
+    border: 1px solid #ededf2;
+    border-radius: 6px;
+    border-left: 4px solid #ededf2;
+}
+
+.progetto-ricetta { border-left-color: #1f3a75; }     
+.progetto-card { border-left-color: #ffcc00; }        
+.progetto-portfolio { border-left-color: #1f3a75; }  
+
+
+.progetto.evidenziato {
+    background-color: #fdf8e3; /* crema chiaro */
+    border: 1px solid #eadfa8;
+}
+
+.badge-new {
+    display: inline-block;
+    background-color: #f11515; /* rosso */
+    color: #ffffff; /* bianco */
+    font-weight: bold;
+    padding: 2px 6px;
+    margin-left: 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+.progetto h3 {
+    margin-top: 0;
+}
+
+.progetto p {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-bottom: 16px;
+}
+
+.link-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #1f3a75;
+    text-decoration: none;
+}
+
+.link-github:hover {
+    text-decoration: underline;
+}
+
+.link-dettaglio-container {
+    text-align: right;
+    margin-top: 24px;
+}
+
+.link-dettaglio {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #1f3a75;
+    text-decoration: underline
+}
+
+.link-dettaglio:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Sezione "Contattami" (form) ---------- */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    max-width: 320px;
+    padding: 6px 8px;
+    margin-top: 4px;
+    font-size: 1rem;
+    border: 2px solid #767676;
+    background-color: #efeff5;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.consenso {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.consenso input {
+    width: auto;
+}
+
+button[type="submit"] {
+    margin-top: 14px;
+    background-color: #1f3a75;
+    color: #fff;
+    border: none;
+    padding: 8px 24px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #16295a;
+}
+
+/* ---------- Piè di pagina ---------- */
+footer {
+    margin-top: 48px;
+    background-color: #1f3a75;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+}
