@@ -64,6 +64,7 @@ sistemata rticle class="progetto progetto-ricetta
 aggiunta card di presentazione e portfolio personale 
 sistemati i commenti per ordine di lettura
 aggiunto class="link-dettaglio-container" per link in basso 
+aggiunto su portfolio personale link dettaglio conteinar con freccia
 
 CSS:
 aggiunti valri e colori su .progetto
@@ -71,3 +72,38 @@ colori personalizzati per i bordi
 aggiunto .progetto p per icona github
 .link github con valori
 allineamento link in basso a destra con .link dettaglio
+Text decoration + color
+
+Step. 6 - form di contatto
+
+HTML
+modifica su html - label for="consenso"
+aggiunto button tipe per icona pulsante invia 
+rimosse altre due opzioni da box proposta di lavoro
+html select per freccetta box sistemato
+
+CSS
+input label max width modificata - border - background
+input::placeholder, textarea::placeholder aggiunto
+.consenso gap: 10px; margin-top: 18px;
+.consenso label aggiunto + parametri
+link vai su github aggiunto text-decoration-color 
+opacity su invia 
+inserito in input text area cursor: none; per il dettaglio di dissolvenza nei text box nome e mail
+aggiunta freccia, background-position: right per spostarla
+
+Step. 7 - piè di pagina
+
+HTML
+inseriti href e class per icone come in intestazione 
+
+
+CSS
+inseriti footer .social più parametri
+social footer background
+
+pulito file 
+sistemati commenti generali
+formattato documetno con HTML language futures
+
+chiuso modifiche. 

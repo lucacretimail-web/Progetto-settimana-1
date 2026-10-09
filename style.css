@@ -1,5 +1,5 @@
 /* ---------- Reset e base ---------- */
-{
+*{
     box-sizing: border-box;
 }
 
@@ -295,25 +295,25 @@ th, td {
     border-left: 4px solid #ededf2;
 }
 
-.progetto-ricetta { border-left-color: #1f3a75; }     
+.progetto-ricetta { border-left-color: #1f3a75; background-color: #faf8ee;}     
 .progetto-card { border-left-color: #ffcc00; }        
-.progetto-portfolio { border-left-color: #1f3a75; }  
+.progetto-portfolio { border-left-color: #1f3a75; background-color: #faf8ee; }  
 
 
 .progetto.evidenziato {
-    background-color: #fdf8e3; /* crema chiaro */
+    background-color: #ffffff; 
     border: 1px solid #eadfa8;
 }
 
 .badge-new {
     display: inline-block;
-    background-color: #f11515; /* rosso */
-    color: #ffffff; /* bianco */
+    background-color: #f11515; 
+    color: #ffffff; 
     font-weight: bold;
-    padding: 2px 6px;
-    margin-left: 10px;
-    border-radius: 4px;
-    font-size: 0.75rem;
+    padding: 2px 4px;
+    margin-left: 6px;
+    border-radius: 2px;
+    font-size: 0.60rem;
 }
 .progetto h3 {
     margin-top: 0;
@@ -337,6 +337,8 @@ th, td {
 
 .link-github:hover {
     text-decoration: underline;
+    color: #1f3a75;
+    text-decoration-color: #ffcc00;
 }
 
 .link-dettaglio-container {
@@ -348,7 +350,8 @@ th, td {
     font-size: 0.85rem;
     font-weight: bold;
     color: #1f3a75;
-    text-decoration: underline
+    text-decoration: underline;
+    text-decoration-color: #ffcc00;
 }
 
 .link-dettaglio:hover {
@@ -360,58 +363,139 @@ form label {
     display: block;
     font-weight: bold;
     margin-top: 14px;
+    font-size: 0.9rem;
+    color: #1f3a75;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="date"],
-select,
 textarea {
-    width: 100%;
-    max-width: 320px;
-    padding: 6px 8px;
-    margin-top: 4px;
-    font-size: 1rem;
-    border: 2px solid #767676;
-    background-color: #efeff5;
+    width: 100%;             
+    max-width: 100%;         
+    padding: 10px 12px;
+    margin-top: 6px;
+    font-size: 0.95rem;
+    border: 1px solid #c9c6b8;
+    background-color: #f7f5ed; 
+    border-radius: 4px;
+    color: #555555;
+    font-family: inherit;
+    cursor: none;
 }
 
+select {
+    width: 100%;
+    max-width: 100%;         
+    padding: 10px 12px;
+    margin-top: 6px;
+    font-size: 0.95rem;
+    border: 1px solid #c9c6b8;
+    background-color: #f7f5ed; 
+    border-radius: 4px;
+    color: #555555;
+    font-family: inherit;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='none' stroke='%23555555' stroke-width='1.5' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+    background-size: 10px 6px;
+    background-repeat: no-repeat;
+    background-position: right 5px center; 
+}
+
+select:focus {
+    background-color: #ffffff;
+    border-color: #1f3a75;
+    outline: none;
+}
+
+
+input::placeholder, textarea::placeholder {
+    color: #bfae90;
+    font-style: italic;
+}
+
+
 textarea {
-    min-height: 100px;
+    min-height: 120px;
     resize: vertical;
 }
 
 .consenso {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 16px;
+    gap: 10px;
+    margin-top: 18px;
     font-weight: bold;
+}
+
+.consenso label {
+    display: inline;
+    font-weight: normal; 
+    margin-top: 0;
+    font-size: 0.9rem;
+    color: #555555;
 }
 
 .consenso input {
     width: auto;
+    margin: 0;
 }
 
 button[type="submit"] {
-    margin-top: 14px;
+    margin-top: 20px;
     background-color: #1f3a75;
     color: #fff;
     border: none;
-    padding: 8px 24px;
+    padding: 12px 28px;
     font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 4px;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; 
 }
 
 button[type="submit"]:hover {
-    background-color: #16295a;
+    background-color: #1f3a75; 
+    opacity: 0.85;             
+    outline-offset: -3px;      
 }
 
 /* ---------- Piè di pagina ---------- */
 footer {
-    margin-top: 48px;
-    background-color: #1f3a75;
-    color: #fff;
+    margin-top: 60px;
+    background-color: #151d33;   
+    color: #b8bfd0;              
     text-align: center;
-    padding: 12px;
+    padding: 28px 20px;
+    font-size: 0.85rem;
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+footer .social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+footer .social a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
 }
